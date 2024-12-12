@@ -1,3 +1,4 @@
+import loadContact from "./contact";
 import loadHome from "./home";
 import loadMenu from "./menu";
 
@@ -23,5 +24,6 @@ function createFooter() {
 
 createTitle();
 // loadHome();
-loadMenu();
+// loadMenu();
+loadContact();
 createFooter();
