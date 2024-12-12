@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 
 function createTitle() {
   const header = document.querySelector("header");
@@ -21,5 +22,6 @@ function createFooter() {
 }
 
 createTitle();
-loadHome();
+// loadHome();
+loadMenu();
 createFooter();
