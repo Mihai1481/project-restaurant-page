@@ -1,3 +1,5 @@
+import loadHome from "./home";
+
 function createTitle() {
   const header = document.querySelector("header");
   header.classList.add("header");
@@ -19,4 +21,5 @@ function createFooter() {
 }
 
 createTitle();
+loadHome();
 createFooter();
