@@ -1,11 +1,23 @@
+import cola from "/home/mihaiodin/Odin/project-restaurant-page/src/assets/cola.png";
+import water from "/home/mihaiodin/Odin/project-restaurant-page/src/assets/water.png";
+import beer from "/home/mihaiodin/Odin/project-restaurant-page/src/assets/beer.png";
+import wine from "/home/mihaiodin/Odin/project-restaurant-page/src/assets/wine.png";
+
+const drinkImages = {
+  cola: cola,
+  water: water,
+  beer: beer,
+  wine: wine,
+};
+
 function createMenu() {
   const container = document.createElement("div");
   container.classList.add("container");
 
-  container.appendChild(createMenuItem("Cola", "3$"));
-  container.appendChild(createMenuItem("Cola", "3$"));
-  container.appendChild(createMenuItem("Cola", "3$"));
-  container.appendChild(createMenuItem("Cola", "3$"));
+  container.appendChild(createMenuItem("Cola", "2$"));
+  container.appendChild(createMenuItem("Beer", "3$"));
+  container.appendChild(createMenuItem("Water", "1$"));
+  container.appendChild(createMenuItem("Wine", "4$"));
 
   return container;
 }
@@ -15,9 +27,8 @@ function createMenuItem(name, price) {
   menuItem.classList.add("menu-item");
 
   const foodImage = document.createElement("img");
-  foodImage.src = `${name.toLowerCase()}.png`;
-  foodImage.alt = `${name}`;
 
+  foodImage.src = drinkImages[name.toLowerCase()];
   menuItem.appendChild(foodImage);
   menuItem.appendChild(createText(`${name}`));
   menuItem.appendChild(createText(`${price}`));

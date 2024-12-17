@@ -5,8 +5,10 @@ function createContact() {
   const foodImage = document.createElement("img");
   foodImage.src = "";
 
-  container.appendChild(createText("123456789"));
-  container.appendChild(createText("Adress"));
+  container.appendChild(createText("Phone Number: 12345678"));
+  container.appendChild(
+    createText("Adress: Carrer de Pau Claris, 08010 Barcelona, Spain")
+  );
   container.appendChild(foodImage);
 
   return container;

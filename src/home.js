@@ -1,10 +1,17 @@
+import logo from "/home/mihaiodin/Odin/project-restaurant-page/src/assets/barcelona-fc-logo.png";
+// import "./styles/home.css";
+
 function createHome() {
   const container = document.createElement("div");
   container.classList.add("container");
 
+  const logoImage = document.createElement("img");
+  logoImage.src = logo;
+
   container.appendChild(createText("Best Team"));
   container.appendChild(createText("In the world"));
-  container.appendChild(createText("Tralal"));
+  container.appendChild(logoImage);
+  container.appendChild(createText("VISCA BARCELONA!"));
 
   return container;
 }
